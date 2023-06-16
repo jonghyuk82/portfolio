@@ -1,13 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import ProjectSingle from "./ProjectSingle";
 import GithubContext from "../../context/GithubContext";
-import { getRepos } from "../../context/GithubAction";
 
 function ProjectGrid() {
   const { projects, dispatch } = useContext(GithubContext);
-
-  console.log(projects);
 
   return (
     <motion.section

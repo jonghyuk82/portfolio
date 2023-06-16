@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import emptyImage from "../../images/web-project-2.jpg";
 import { Link } from "react-router-dom";

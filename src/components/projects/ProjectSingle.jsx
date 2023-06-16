@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import emptyImage from "../../images/web-project-2.jpg";
+import { Link } from "react-router-dom";
 
-function ProjectSingle({ keyIndex }) {
-  console.log(localStorage.getItem("theme"));
+function ProjectSingle({ repo, index }) {
+  const { name, displayName, url, imgUrls } = repo;
+  // const { projectName, projectDisplayName, imgUrls } = projects;
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -15,20 +19,22 @@ function ProjectSingle({ keyIndex }) {
       className="card w-96 bg-base-100 shadow-xl"
     >
       <figure className="px-10 pt-10">
-        <img
-          src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-          alt={`PROJECT ${keyIndex}`}
-          className="rounded-xl"
-        />
+        {imgUrls.length > 0 ? (
+          <img src={`${imgUrls[0]}`} alt="" className="rounded-xl" />
+        ) : (
+          <img src={emptyImage} alt="" className="rounded-xl" />
+        )}
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title">Shoes!</h2>
+        <h2 className="card-title">{displayName}</h2>
         <p>If a dog chews shoes whose shoes does he choose?</p>
         <div className="card-actions">
-          <button className="btn btn-outline btn-primary dark:btn dark:btn-outline dark:btn-success">
-            Demo
-          </button>
-          <button className="btn btn-outline btn-accent">Code</button>
+          <Link>
+            <button className="btn btn-outline btn-primary">Demo</button>
+          </Link>
+          <Link to={url}>
+            <button className="btn btn-outline btn-accent">Code</button>
+          </Link>
         </div>
       </div>
     </motion.div>

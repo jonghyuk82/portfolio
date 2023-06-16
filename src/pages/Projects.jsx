@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import ProjectGrid from "../components/projects/ProjectGrid";
 
 function Projects() {
   return (
-    <div>
-      <h1>Project</h1>
-    </div>
-  )
+    <>
+      <ProjectGrid />
+    </>
+  );
 }
 
-export default Projects
+export default Projects;

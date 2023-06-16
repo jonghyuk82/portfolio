@@ -1,34 +1,19 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useContext, useRef } from "react";
 import { motion } from "framer-motion";
 import { FiArrowDownCircle } from "react-icons/fi";
 import personImage from "../images/personImage.jpg";
+import AppContext from "../context/AppContext";
 
 function Banner() {
   const smallImageRef = useRef(null);
   const largeImageRef = useRef(null);
   const centerRef = useRef(null);
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [theme, setTheme] = useState(localStorage.theme);
-  const activeTheme = theme === "dark" ? "light" : "dark";
+  const { theme, windowWidth, dispatch } = useContext(AppContext);
 
-  useEffect(() => {
-    localStorage.setItem("theme", theme);
-    const localTheme = localStorage.getItem("theme");
-    document.querySelector("html").setAttribute("data-theme", localTheme);
-  }, [theme]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // const [theme, setTheme] = useState(localStorage.theme);
+  // const activeTheme = theme === "dark" ? "light" : "dark";
 
   useEffect(() => {
     if (windowWidth < 1280) {
@@ -119,44 +104,69 @@ function Banner() {
               >
                 I'm a Full-Stack Software Engineer.
               </motion.h1>
-
-              <div className="text-fuchsia-500 mb-10">
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{
-                    ease: "easeInOut",
-                    duration: 0.9,
-                    delay: 1.9,
-                  }}
-                >
-                  I'm software engineer specializing in building exceptional
-                  digital experiences.
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{
-                    ease: "easeInOut",
-                    duration: 0.9,
-                    delay: 1.9,
-                  }}
-                >
-                  Currently, I'm foucused on building warehouse management
-                  products at
-                  {activeTheme === "light" ? (
+              {theme === "light" ? (
+                <div className="text-green-500 mb-10">
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                      ease: "easeInOut",
+                      duration: 0.9,
+                      delay: 1.9,
+                    }}
+                  >
+                    I'm software engineer specializing in building exceptional
+                    digital experiences.
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                      ease: "easeInOut",
+                      duration: 0.9,
+                      delay: 1.9,
+                    }}
+                  >
+                    Currently, I'm focused on building warehouse management
+                    products at
                     <span className="font-semibold text-black">
                       {" "}
                       Alinxsoft.
                     </span>
-                  ) : (
-                    <span className="font-semibold text-black">
+                  </motion.p>
+                </div>
+              ) : (
+                <div className="text-fuchsia-500 mb-10">
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                      ease: "easeInOut",
+                      duration: 0.9,
+                      delay: 1.9,
+                    }}
+                  >
+                    I'm software engineer specializing in building exceptional
+                    digital experiences.
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                      ease: "easeInOut",
+                      duration: 0.9,
+                      delay: 1.9,
+                    }}
+                  >
+                    Currently, I'm focused on building warehouse management
+                    products at
+                    <span className="font-semibold text-white">
                       {" "}
                       Alinxsoft.
                     </span>
-                  )}
-                </motion.p>
-              </div>
+                  </motion.p>
+                </div>
+              )}
 
               <motion.div
                 initial={{ opacity: 0 }}

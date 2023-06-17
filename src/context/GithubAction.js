@@ -42,7 +42,6 @@ export const getProjectLists = async () => {
 
     const apiResponse = await github.get(`/users/jonghyuk82/starred`);
     const apiRepos = apiResponse.data;
-
     // merge
 
     const projects = [];
@@ -57,6 +56,7 @@ export const getProjectLists = async () => {
           displayName: project.data.displayName,
           url: matching.html_url,
           imgUrls: project.data.imgUrls,
+          demoUrl: project.data.demoUrl,
         });
       }
     });

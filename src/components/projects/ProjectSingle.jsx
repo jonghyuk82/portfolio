@@ -4,7 +4,7 @@ import emptyImage from "../../images/web-project-2.jpg";
 import { Link } from "react-router-dom";
 
 function ProjectSingle({ repo, index }) {
-  const { name, displayName, url, imgUrls } = repo;
+  const { name, displayName, url, imgUrls, demoUrl } = repo;
   // const { projectName, projectDisplayName, imgUrls } = projects;
 
   return (
@@ -29,7 +29,7 @@ function ProjectSingle({ repo, index }) {
         <h2 className="card-title">{displayName}</h2>
         <p>If a dog chews shoes whose shoes does he choose?</p>
         <div className="card-actions">
-          <Link>
+          <Link to={demoUrl}>
             <button className="btn btn-outline btn-primary">Demo</button>
           </Link>
           <Link to={url}>

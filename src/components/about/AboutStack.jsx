@@ -27,14 +27,14 @@ const AboutStack = () => {
       {windowWidth < 860 ? (
         <div className="mt-10 bg-zinc-50 shadow-sm flex justify-center items-center">
           <div className="container flex flex-col mx-auto py-20 block justify-center items-center text-4xl">
-            <FaHtml5 className="mb-5" />
-            <FaCss3 className="mb-5" />
+            <img src={csharpLogo} alt="C Sharp" className="w-12 mb-5"></img>
+            <TbSql className="mb-5" />
             <FaReact className="mb-5" />
             <FaAngular className="mb-5" />
             <SiJavascript className="mb-5" />
             <SiTypescript className="mb-5" />
-            <TbSql className="mb-5" />
-            <img src={csharpLogo} alt="C Sharp" className="w-12 mb-5"></img>
+            <FaHtml5 className="mb-5" />
+            <FaCss3 className="mb-5" />
             <FaAws className="mb-5" />
             <SiAzuredevops className="mb-5" />
             <FaGithub className="mb-5" />
@@ -46,14 +46,14 @@ const AboutStack = () => {
       ) : (
         <div className="mt-5 sm:mt-10 bg-zinc-50 shadow-sm sm:flex sm:justify-between items-center">
           <div className="container mx-auto py-20 block sm:flex sm:justify-between items-center text-4xl">
-            <FaHtml5 />
-            <FaCss3 />
+            <img src={csharpLogo} alt="C Sharp" className="w-12"></img>
+            <TbSql />
             <FaReact />
             <FaAngular />
             <SiJavascript />
             <SiTypescript />
-            <TbSql />
-            <img src={csharpLogo} alt="C Sharp" className="w-12"></img>
+            <FaHtml5 />
+            <FaCss3 />
             <FaAws />
             <SiAzuredevops />
             <FaGithub />
@@ -63,45 +63,6 @@ const AboutStack = () => {
           </div>
         </div>
       )}
-
-      {/* <div className="flex border-b border-primary-light mt-10"></div> */}
-      {/* <div className="mt-5 sm:mt-10 bg-zinc-50 shadow-sm sm:flex sm:justify-between items-center">
-        {windowWidth < 860 ? (
-          <div className="container mx-auto py-20 block sm:flex sm:justify-between items-center text-4xl">
-            <FaHtml5 />
-            <FaCss3 />
-            <FaReact />
-            <FaAngular />
-            <SiJavascript />
-            <SiTypescript />
-            <TbSql />
-            <img src={csharpLogo} alt="C Sharp" className="w-12"></img>
-            <FaAws />
-            <SiAzuredevops />
-            <FaGithub />
-            <FaGit />
-            <SiVisualstudio />
-            <TbBrandVscode />
-          </div>
-        ) : (
-          <div className="container mx-auto py-20 block sm:flex sm:justify-between items-center text-4xl">
-            <FaHtml5 />
-            <FaCss3 />
-            <FaReact />
-            <FaAngular />
-            <SiJavascript />
-            <SiTypescript />
-            <TbSql />
-            <img src={csharpLogo} alt="C Sharp" className="w-12"></img>
-            <FaAws />
-            <SiAzuredevops />
-            <FaGithub />
-            <FaGit />
-            <SiVisualstudio />
-            <TbBrandVscode />
-          </div>
-        )}
-      </div> */}
     </div>
   );
 };

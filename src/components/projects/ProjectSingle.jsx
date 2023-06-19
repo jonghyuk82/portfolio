@@ -16,7 +16,7 @@ function ProjectSingle({ repo, index }) {
         duration: 0.7,
         delay: 1,
       }}
-      className="card w-96 bg-base-100 shadow-xl"
+      className="card w-96 bg-base-100 shadow-xl mt-5"
     >
       <figure className="px-10 pt-10">
         {imgUrls.length > 0 ? (

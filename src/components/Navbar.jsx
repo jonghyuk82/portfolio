@@ -45,7 +45,7 @@ function Navbar() {
             </div>
           </Link>
           {/* Theme switcher small screen */}
-          <div
+          {/* <div
             onClick={handleTheme}
             aria-label="Theme Switcher"
             className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
@@ -55,7 +55,7 @@ function Navbar() {
             ) : (
               <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
             )}
-          </div>
+          </div> */}
 
           {/* Small screen hamburger menu */}
           <div className="sm:hidden">
@@ -93,21 +93,21 @@ function Navbar() {
             className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-sky-400 dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
             aria-label="Projects"
           >
-            small Projects
+            Projects
           </Link>
           <Link
             to="/about"
             className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-sky-400 dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
             aria-label="About Me"
           >
-            small About
+            About
           </Link>
           <Link
             to="/contact"
             className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-sky-400 dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
             aria-label="Contact"
           >
-            small Contact
+            Contact
           </Link>
         </div>
 
@@ -139,7 +139,7 @@ function Navbar() {
         {/* Header right section buttons */}
         <div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
           {/* Theme switcher large screen */}
-          <div
+          {/* <div
             onClick={handleTheme}
             aria-label="Theme Switcher"
             className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
@@ -149,7 +149,7 @@ function Navbar() {
             ) : (
               <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </motion.nav>

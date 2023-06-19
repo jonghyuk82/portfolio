@@ -100,73 +100,40 @@ function Banner() {
                   duration: 0.9,
                   delay: 1.2,
                 }}
-                className="text-lg font-semibold text-gray-400 mb-2"
+                className="text-lg font-semibold text-gray-500 mb-2"
               >
                 I'm a Full-Stack Software Engineer.
               </motion.h1>
-              {theme === "light" ? (
-                <div className="text-green-500 mb-10">
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{
-                      ease: "easeInOut",
-                      duration: 0.9,
-                      delay: 1.9,
-                    }}
-                  >
-                    I'm software engineer specializing in building exceptional
-                    digital experiences.
-                  </motion.p>
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{
-                      ease: "easeInOut",
-                      duration: 0.9,
-                      delay: 1.9,
-                    }}
-                  >
-                    Currently, I'm focused on building warehouse management
-                    products at
-                    <span className="font-semibold text-black">
-                      {" "}
-                      Alinxsoft.
-                    </span>
-                  </motion.p>
-                </div>
-              ) : (
-                <div className="text-fuchsia-500 mb-10">
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{
-                      ease: "easeInOut",
-                      duration: 0.9,
-                      delay: 1.9,
-                    }}
-                  >
-                    I'm software engineer specializing in building exceptional
-                    digital experiences.
-                  </motion.p>
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{
-                      ease: "easeInOut",
-                      duration: 0.9,
-                      delay: 1.9,
-                    }}
-                  >
-                    Currently, I'm focused on building warehouse management
-                    products at
-                    <span className="font-semibold text-white">
-                      {" "}
-                      Alinxsoft.
-                    </span>
-                  </motion.p>
-                </div>
-              )}
+              <div className="text-gray-400 mb-10">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    ease: "easeInOut",
+                    duration: 0.9,
+                    delay: 1.9,
+                  }}
+                >
+                  I'm a software engineer specializing in building exceptional
+                  digital experiences.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    ease: "easeInOut",
+                    duration: 0.9,
+                    delay: 1.9,
+                  }}
+                >
+                  Currently, I'm focused on building warehouse management
+                  products at
+                  <span className="font-semibold text-gray-500">
+                    {" "}
+                    Alinxsoft.
+                  </span>
+                </motion.p>
+              </div>
 
               <motion.div
                 initial={{ opacity: 0 }}

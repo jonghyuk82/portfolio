@@ -8,7 +8,6 @@ function ProjectGrid() {
   const { projects, dispatch } = useContext(GithubContext);
   const { windowWidth } = useContext(AppContext);
 
-  console.log(windowWidth);
   return (
     <motion.section
       initial={{ opacity: 0 }}

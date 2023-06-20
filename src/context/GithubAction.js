@@ -57,6 +57,7 @@ export const getProjectLists = async () => {
           url: matching.html_url,
           imgUrls: project.data.imgUrls,
           demoUrl: project.data.demoUrl,
+          description: project.data.description,
         });
       }
     });

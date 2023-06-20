@@ -4,7 +4,7 @@ import emptyImage from "../../images/No_Image_Available.jpg";
 import { Link } from "react-router-dom";
 
 function ProjectSingle({ repo, index }) {
-  const { name, displayName, url, imgUrls, demoUrl } = repo;
+  const { name, displayName, url, imgUrls, demoUrl, description } = repo;
   // const { projectName, projectDisplayName, imgUrls } = projects;
 
   return (
@@ -28,7 +28,7 @@ function ProjectSingle({ repo, index }) {
       </figure>
       <div className="card-body items-center text-center">
         <h2 className="card-title">{displayName}</h2>
-        <p></p>
+        <p>{description}</p>
         <div className="card-actions">
           <Link to={demoUrl}>
             <button className="btn btn-outline btn-primary">Demo</button>

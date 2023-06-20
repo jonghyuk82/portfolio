@@ -9,11 +9,10 @@ import {
   FaGithub,
   FaGit,
 } from "react-icons/fa";
-import { TbSql, TbBrandCSharp, TbBrandVscode } from "react-icons/tb";
+import { TbSql, TbBrandVscode } from "react-icons/tb";
 import {
   SiTypescript,
   SiJavascript,
-  SiCsharp,
   SiAzuredevops,
   SiVisualstudio,
 } from "react-icons/si";

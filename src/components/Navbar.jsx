@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import logoPerson from "../images/personImage.jpg";
+import logoPerson from "../images/logo.png";
 import { motion } from "framer-motion";
 import { FiMenu, FiMoon, FiSun, FiX } from "react-icons/fi";
 import AppContext from "../context/AppContext";
@@ -39,7 +39,7 @@ function Navbar() {
             <div className="w-10 rounded-full">
               <img
                 src={logoPerson}
-                className="w-10 rounded-full"
+                className="w-64 rounded-full"
                 alt="Jonghyuk Lee"
               />
             </div>

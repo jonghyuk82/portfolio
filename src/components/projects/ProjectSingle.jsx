@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import emptyImage from "../../images/web-project-2.jpg";
+import emptyImage from "../../images/No_Image_Available.jpg";
 import { Link } from "react-router-dom";
 
 function ProjectSingle({ repo, index }) {
@@ -20,6 +20,7 @@ function ProjectSingle({ repo, index }) {
     >
       <figure className="px-10 pt-10">
         {imgUrls.length > 0 ? (
+          // <img src={`${imgUrls[0]}`} alt="" className="rounded-xl" />
           <img src={`${imgUrls[0]}`} alt="" className="rounded-xl" />
         ) : (
           <img src={emptyImage} alt="" className="rounded-xl" />
@@ -27,7 +28,7 @@ function ProjectSingle({ repo, index }) {
       </figure>
       <div className="card-body items-center text-center">
         <h2 className="card-title">{displayName}</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <p></p>
         <div className="card-actions">
           <Link to={demoUrl}>
             <button className="btn btn-outline btn-primary">Demo</button>
